@@ -2,7 +2,7 @@
 #   TODO:
 #	- compres docs/readme but not scripts
 #
-Summary:	A networking utility which read and write data across a network.
+Summary:	A networking utility which read and write data across a network
 Summary(pl):	Narzêdzie sieciowe do przesy³ania danych
 Name:		ncat
 Version:	0.10rc1
@@ -12,7 +12,7 @@ License:	GPLv2 with OpenSSL exception
 #Vendor:	-
 Group:		Applications
 #Icon:		-
-Source0:	http://surfnet.dl.sourceforge.net/sourceforge/nmap-ncat/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/nmap-ncat/%{name}-%{version}.tar.gz
 # Source0-md5:	b2624656247db958d1ebb4bbedf4dbd3
 URL:		http://sourceforge.net/projects/nmap-ncat/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
