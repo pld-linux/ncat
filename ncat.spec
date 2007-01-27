@@ -5,15 +5,17 @@
 Summary:	A networking utility which read and write data across a network
 Summary(pl):	Narzêdzie sieciowe do przesy³ania danych
 Name:		ncat
-Version:	0.10rc1
-Release:	0.2
-Epoch:		0
+%define		_rc	rc3
+%define		_rel	1
+Version:	0.10
+Release:	0.%{_rc}.%{_rel}
+Epoch:		1
 License:	GPLv2 with OpenSSL exception
 #Vendor:	-
 Group:		Applications
 #Icon:		-
-Source0:	http://dl.sourceforge.net/nmap-ncat/%{name}-%{version}.tar.gz
-# Source0-md5:	b2624656247db958d1ebb4bbedf4dbd3
+Source0:	http://dl.sourceforge.net/nmap-ncat/%{name}-%{version}%{_rc}.tar.gz
+# Source0-md5:	5febca55c280c98ffb17977030a9b919
 URL:		http://sourceforge.net/projects/nmap-ncat/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -46,17 +48,10 @@ opcja "po¶redniczenia w po³±czeniach", pozwalaj±ca po³±czyæ siê dwóm
 bezpo¶rednio.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}%{_rc}
 
 %build
-cd nbase
 %configure
-cd ../nsock/src
-%configure
-cd ../..
-
-%{__make} -C nbase
-%{__make} -C nsock/src
 %{__make}
 
 %install
@@ -66,7 +61,7 @@ install -d $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}/examples/{logs,scripts/h
 install -d $RPM_BUILD_ROOT%{_mandir}/man1
 
 install ncat $RPM_BUILD_ROOT%{_bindir}
-install docs/{AUTHORS,BUGS,CHANGES,HTTP-PROXY,README,TODO} $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
+install docs/{AUTHORS,BUGS,HTTP-PROXY,README} $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 install docs/examples/{ipaccess,README} $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}/examples
 install docs/examples/logs/{ascii-output,hex-output} $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}/examples/logs
 install docs/examples/scripts/{http-proxy,README} $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}/examples/scripts
