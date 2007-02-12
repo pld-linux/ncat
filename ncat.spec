@@ -3,7 +3,7 @@
 #	- compres docs/readme but not scripts
 #
 Summary:	A networking utility which read and write data across a network
-Summary(pl):	Narzêdzie sieciowe do przesy³ania danych
+Summary(pl.UTF-8):   NarzÄ™dzie sieciowe do przesyÅ‚ania danych
 Name:		ncat
 %define		_rc	rc3
 %define		_rel	1
@@ -33,19 +33,19 @@ support for both listen and connect operations too. As well as a new
 connect that perhaps previously were unable to directly connect to
 each other.
 
-%description -l pl
+%description -l pl.UTF-8
 Ncat to reimplementacja rodziny Netcat. Ncat jest podzbiorem
-mo¿liwo¶ci z oryginalnego Netcata, ale w pe³ni sprawdzonym. Dostêpne
-s± nowe mo¿liwo¶ci i po³±czenie mo¿liwo¶ci rodziny Netcat (obs³uga
-IPv6, obs³uga SSL itp.). Obs³uga skanowania portów zosta³a ca³kowicie
-usuniêta z Ncata.
+moÅ¼liwoÅ›ci z oryginalnego Netcata, ale w peÅ‚ni sprawdzonym. DostÄ™pne
+sÄ… nowe moÅ¼liwoÅ›ci i poÅ‚Ä…czenie moÅ¼liwoÅ›ci rodziny Netcat (obsÅ‚uga
+IPv6, obsÅ‚uga SSL itp.). ObsÅ‚uga skanowania portÃ³w zostaÅ‚a caÅ‚kowicie
+usuniÄ™ta z Ncata.
 
-Pod kapturem Ncata kryje siê obs³uga IPv4 i IPv6, a tak¿e obs³uga TCP
-i UDP zarówno w trybie nas³uchiwania, jak i ³±czenia. Jest tak¿e
-obs³uga SSL przy operacjach nas³uchiwania i ³±czenia, a tak¿e nowa
-opcja "po¶redniczenia w po³±czeniach", pozwalaj±ca po³±czyæ siê dwóm
-(lub wiêcej) hostom, które normalnie nie mog³y siê po³±czyæ
-bezpo¶rednio.
+Pod kapturem Ncata kryje siÄ™ obsÅ‚uga IPv4 i IPv6, a takÅ¼e obsÅ‚uga TCP
+i UDP zarÃ³wno w trybie nasÅ‚uchiwania, jak i Å‚Ä…czenia. Jest takÅ¼e
+obsÅ‚uga SSL przy operacjach nasÅ‚uchiwania i Å‚Ä…czenia, a takÅ¼e nowa
+opcja "poÅ›redniczenia w poÅ‚Ä…czeniach", pozwalajÄ…ca poÅ‚Ä…czyÄ‡ siÄ™ dwÃ³m
+(lub wiÄ™cej) hostom, ktÃ³re normalnie nie mogÅ‚y siÄ™ poÅ‚Ä…czyÄ‡
+bezpoÅ›rednio.
 
 %prep
 %setup -q -n %{name}-%{version}%{_rc}
