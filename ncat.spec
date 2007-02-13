@@ -3,7 +3,7 @@
 #	- compres docs/readme but not scripts
 #
 Summary:	A networking utility which read and write data across a network
-Summary(pl.UTF-8):   Narzędzie sieciowe do przesyłania danych
+Summary(pl.UTF-8):	Narzędzie sieciowe do przesyłania danych
 Name:		ncat
 %define		_rc	rc3
 %define		_rel	1
